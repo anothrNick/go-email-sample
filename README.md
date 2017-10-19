@@ -6,7 +6,7 @@ To send:
 1. Set values in `mailgun.go`
 * `domain`
   * mailgun domain
-* `piKey`
+* `apiKey`
   * mailgun private API key
 * `publicApiKey`
   * mailgun public API key

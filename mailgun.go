@@ -7,7 +7,7 @@ import (
     "bytes"
 )
 
-func ParseTemplate(templateFileName string) (string, error) {
+func ParseTemplate(templateFileName string, data interface{}) (string, error) {
   t, err := template.ParseFiles(templateFileName)
 
   if err != nil {
@@ -15,17 +15,17 @@ func ParseTemplate(templateFileName string) (string, error) {
   }
 
   buf := new(bytes.Buffer)
-  if err = t.Execute(buf, templateData); err != nil {
+  if err = t.Execute(buf, data); err != nil {
     return "", err
   }
   msgBody := buf.String()
 
-  return nil, msgBody
+  return msgBody, nil
 }
 
 func SendMessage() (string, error) {
   mg := mailgun.NewMailgun("<domain>", 
-                           "<ApiKey>", 
+                           "<apiKey>", 
                            "<publicApiKey>",)
   templateData := struct {
       Name string
@@ -34,10 +34,10 @@ func SendMessage() (string, error) {
     }{
       Name: "Name",
       URL:  "http://somesite.tld",
-      Site: "Site Name"
+      Site: "Site Name",
     }
 
-  msgBody, err := ParseTemplate("email-template.html")
+  msgBody, err := ParseTemplate("email-template.html", templateData)
   if err != nil {
     return "nil", err
   }

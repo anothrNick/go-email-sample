@@ -16,11 +16,11 @@ To send:
   * Recipient email address
 
 2. Get `mailgun-go` dependency
-  ```
-  go get github.com/mailgun/mailgun-go
-  ```
+    ```
+    go get github.com/mailgun/mailgun-go
+    ```
 
 3. Run
-  ```
-  go run mailgun.go
-  ``
+    ```
+    go run mailgun.go
+    ```

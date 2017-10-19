@@ -4,23 +4,23 @@ A simple example of how to send email with MailGun and golang
 To send:
 
 1. Set values in `mailgun.go`
-* <domain>
+* `domain`
   * mailgun domain
-* <ApiKey>
+* `piKey`
   * mailgun private API key
-* <publicApiKey>
+* `publicApiKey`
   * mailgun public API key
-* <sender>
+* `sender`
   * Sender email address
-* <receiver>
+* `receiver`
   * Recipient email address
 
 2. Get `mailgun-go` dependency
-```
-go get github.com/mailgun/mailgun-go
-```
+  ```
+  go get github.com/mailgun/mailgun-go
+  ```
 
 3. Run
-```
-go run mailgun.go
-```
+  ```
+  go run mailgun.go
+  ``

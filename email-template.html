@@ -48,7 +48,8 @@
       text-align: center;
       cursor: pointer;
       display: inline-block;
-      border-radius: 25px;
+      border-radius: 5px;
+      font-size: 18px;
     }
 
     .btn-secondary {
@@ -136,7 +137,7 @@
     p, ul, ol {
       margin-bottom: 10px;
       font-weight: normal;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     ul li, ol li {
@@ -193,9 +194,11 @@
         <table>
           <tr>
             <td>
+              <img style="border-radius: 10px;" width="50px" height="50px" src="http://placebear.com/50/50"/><br/>
+              <h2 style="margin: 5px 0px;color:#434245; line-height: 36px;font-weight: 900;letter-spacing: -.75px;"><strong>Confirm your email address</strong></h2>
               <p>Hello {{.Name}}!</p>
               <p>You recently signed up for an account on {{.Site}}.</p>
-              <p><a href='{{.URL}}' class="btn-primary">Please activate your account by clicking here.</a></p>
+              <p><a href='{{.URL}}' class="btn-primary">Confirm Email Address</a></p>
               <p>Thanks!</p>
             </td>
           </tr>
